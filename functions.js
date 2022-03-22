@@ -19,8 +19,16 @@
  * sumOdds([3, 7, 8, 15, 2, 1, 13]) -> 39
  */
 function sumOdds(numbers) {
-  // Your code here
-}
+  let sum =0;
+  numbers.forEach(num => {
+      if (num % 2 === 1)
+      sum += num;
+        
+  });
+  return sum;
+ }
+ sumOdds([3, 7, 8, 15, 2, 1, 13]);
+
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
 /**
@@ -37,8 +45,16 @@ function sumOdds(numbers) {
  * Another Hint: Use string methods to make it case-insensitive
  */
 function characterCount(string, c) {
-  // Your code here
+  let i =0;
+  string.split(char);
+  for (let index = 0; index < array.length; index++) {
+    if ( char === "c"){
+      i++;
+    }
+  }
+  return i;
 }
+
 // console.log(characterCount("Character Count is clever", "c"));
 
 /**
@@ -58,7 +74,12 @@ function characterCount(string, c) {
  * largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> 545
  */
 function largestIncrement(numbers) {
-  // Your code here
+  let i=0;
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    if ()
+    
+  }
 }
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 
@@ -74,7 +95,8 @@ function largestIncrement(numbers) {
  * afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52) -> [14, 56, 601, 777, 888, 999]
  */
 function afterX(numbers, x) {
-  // Your code here
+  return numbers.slice(indexof(x)+1);
+  
 }
 // console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 
@@ -90,7 +112,7 @@ function afterX(numbers, x) {
  * Hint: Use string method .toUpperCase()
  */
 function abbreviate(firstName, lastName) {
-  // Your code here
+  return (firstName.toUpperCase(),lastName.toUpperCase()); 
 }
 // console.log(abbreviate("miss", "Stephane"));
 
@@ -105,7 +127,7 @@ function abbreviate(firstName, lastName) {
  *
  */
 function isUpperCase(string) {
-  // Your code here
+  const uppercase = names.map(name => name.toUpperCase());
 }
 
 // console.log(isUpperCase("JCREW"));
@@ -121,7 +143,7 @@ function isUpperCase(string) {
  *
  */
 function elementInArray(numbers, x) {
-  // Your code here
+  return numbers.indexof([x]) === x;
 }
 // console.log(elementInArray([5, 6, 7], 8));
 
