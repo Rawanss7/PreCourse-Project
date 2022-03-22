@@ -1,3 +1,5 @@
+
+ 
 /**
  * REFERENCES:
  * - String methods: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#
@@ -18,17 +20,15 @@
  * sumOdds([1, 2, 3, 4, 5, 6, 7, 8, 9]) -> 25
  * sumOdds([3, 7, 8, 15, 2, 1, 13]) -> 39
  */
-function sumOdds(numbers) {
-  let sum =0;
-  numbers.forEach(num => {
-      if (num % 2 === 1)
-      sum += num;
-        
-  });
+ function sumOdds(numbers) {
+  // Your code here
+  let oddarr = numbers.filter((num) => num % 2 === 1);
+  let sum = 0;
+  for (let i = 0; i < oddarr.length; i++) {
+    sum = sum + oddarr[i];
+  }
   return sum;
- }
- sumOdds([3, 7, 8, 15, 2, 1, 13]);
-
+}
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
 /**
@@ -45,16 +45,12 @@ function sumOdds(numbers) {
  * Another Hint: Use string methods to make it case-insensitive
  */
 function characterCount(string, c) {
-  let i =0;
-  string.split(char);
-  for (let index = 0; index < array.length; index++) {
-    if ( char === "c"){
-      i++;
-    }
-  }
-  return i;
+  // Your code here
+  let arr = Array.from(string.toLowerCase());
+  let arrOfC = arr.filter((character) => character === c.toLowerCase());
+  console.log(arrOfC);
+  return arrOfC.length;
 }
-
 // console.log(characterCount("Character Count is clever", "c"));
 
 /**
@@ -74,9 +70,9 @@ function characterCount(string, c) {
  * largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> 545
  */
 function largestIncrement(numbers) {
-  }
-
-// console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
+ 
+}
+console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 
 /**
  * afterX(numbers, x):
@@ -90,10 +86,11 @@ function largestIncrement(numbers) {
  * afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52) -> [14, 56, 601, 777, 888, 999]
  */
 function afterX(numbers, x) {
-  return numbers.slice(indexof(x)+1);
-  
+  // Your code here
+  let indexOfx = numbers.indexOf(x);
 }
-// console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+
+//console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 
 /**
  * abbreviate(firstName, lastName):
@@ -107,7 +104,10 @@ function afterX(numbers, x) {
  * Hint: Use string method .toUpperCase()
  */
 function abbreviate(firstName, lastName) {
-  return (firstName.toUpperCase(),lastName.toUpperCase()); 
+  // Your code here
+  let firstname = Array.from(firstName.toUpperCase());
+  let lastname = Array.from(lastName.toUpperCase());
+  return firstname[0] + lastname[0];
 }
 // console.log(abbreviate("miss", "Stephane"));
 
@@ -122,10 +122,16 @@ function abbreviate(firstName, lastName) {
  *
  */
 function isUpperCase(string) {
-  const uppercase = names.map(name => name.toUpperCase());
+  // Your code here
+  let uppercase = string.toUpperCase();
+  if (uppercase === string) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-// console.log(isUpperCase("JCREW"));
+console.log(isUpperCase("JCREW"));
 
 /**
  * elementInArray(numbers, x):
@@ -138,9 +144,15 @@ function isUpperCase(string) {
  *
  */
 function elementInArray(numbers, x) {
-  return numbers.indexof([x]) === x;
+  // Your code here
+  let newarr = numbers.filter((element) => element === x);
+  if (newarr.length === 0) {
+    return false;
+  } else {
+    return true;
+  }
 }
-// console.log(elementInArray([5, 6, 7], 8));
+console.log(elementInArray([5, 6, 7], 8));
 
 module.exports = {
   sumOdds,
@@ -151,3 +163,4 @@ module.exports = {
   isUpperCase,
   elementInArray,
 };
+
