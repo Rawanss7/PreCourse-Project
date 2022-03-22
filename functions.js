@@ -74,12 +74,8 @@ function characterCount(string, c) {
  * largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> 545
  */
 function largestIncrement(numbers) {
-  let i=0;
-  for (let index = 0; index < array.length; index++) {
-    const element = array[index];
-    
   }
-}
+
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 
 /**
